@@ -9,7 +9,7 @@ class ProboDetector extends EnvironmentDetector {
     return isset($_ENV['PROBO_ENVIRONMENT']) ? 'probo' : null;
   }
 
-  public static function getCiSettingsFile() {
+  public static function getCiSettingsFile(): string {
     return sprintf('%s/vendor/acquia/blt-probo/settings/probo.settings.php', dirname(DRUPAL_ROOT));
   }
 }
